@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs-CZ">
+    <head>
+        <meta charset="utf-8">
+        <title>TrophyRP | fivem roleplay</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.png">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo">TrophyRP</a>
+            <ul>
+                <li><a href="index.html" class="active">domů</a></li>
+                <li><a href="Pravidla.html">Pravidla</a></li>
+                <li><a href="Obchod.html">Obchod</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li><a href="https://discord.gg/z7dqKQGJsg" class="actived">Discord</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="images/stars.png" id="stars">
+            <img src="images/moon.png" id="moon">
+            <img src="images/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">TrophyRP</h2>
+            <a href="fivem://connect/11.11.11.11:30120" id="btn">Server Offline</a>
+            <img src="images/mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>O serveru</h2>
+            <p>Jsme československý roleplay server běžící na platformě FiveM.
+                Server se na scéně pohybuje od roku 2022 a během pár týdnů jeho chodu si vybudoval komunitu hráčů. Snažíme se naslouchat komunitě a plnit její přání, takže jsme vždy rádi za jakékoli užitečné nápady, které od hráčů dostáváme.<br><br>Na serveru najdete mnoho užitečných scriptů, add-on vozidel či značkového i neznačkového oblečení. Hráči mohou náš server podporovat prostřednictvím internetového e-shopu, kde si hráči mohou nakupovat herní ranky, či různé doplňky do hry.
+                Tímto nákupem mohou hráči podpořit vývoj serveru.
+                Všechny peníze ze zakoupených produktů investujeme do serveru a to například do hostingu, nových scriptů, placených modelů vozidel a dalších...</p>
+        </div>
+        <footer>
+            <p>©2022 TrophyRP | Všechna práva vyhrazena.</p>
+        </footer>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
